@@ -1,0 +1,294 @@
+html {
+    font-size: 16px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #0b0d21;
+    color: #e8e8f0;
+    line-height: 1.5;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    padding: 1rem;
+    background-color: #14173a;
+    border-bottom: 2px solid #6c63ff;
+}
+
+.nav-button {
+    width: 9rem;
+    padding: 0.6rem 0;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #6c63ff;
+    border-radius: 2rem;
+}
+
+.nav-button:hover {
+    background-color: #8f88ff;
+}
+
+.hero {
+    padding: 6rem 1.5rem;
+    text-align: center;
+    background: linear-gradient(180deg, #1b1f4d, #0b0d21);
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    color: #ffffff;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    max-width: 40rem;
+    margin: 0 auto;
+    color: #b8b8d8;
+}
+
+.section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 4rem 1.5rem;
+}
+
+.section-title {
+    font-size: 2.25rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #ffffff;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 2rem;
+}
+
+.card {
+    display: grid;
+    grid-template-rows: 250px auto;
+    grid-template-columns: 1fr;
+
+    background-color: #1a1d42;
+    border-radius: 1rem;
+    overflow: hidden;
+    border: 1px solid #2e3270;
+}
+
+.card-image {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-content {
+    padding: 1.5rem;
+}
+
+.card-content h3 {
+    font-size: 1.6rem;
+    color: #ffffff;
+}
+
+.card-content .card-tag {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    color: #8f88ff;
+    margin-bottom: 0.75rem;
+}
+
+.card-content p {
+    font-size: 1rem;
+}
+
+.planet {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.mars-bg {
+    background-color: #2a1410;
+}
+.mars {
+    background: radial-gradient(circle at 35% 35%, #f4a261, #c1440e, #5c1a05);
+}
+
+.jupiter-bg {
+    background-color: #241a10;
+}
+.jupiter {
+    background: linear-gradient(180deg,
+        #d9b38c 0%, #b07a4f 20%, #e6cfb3 35%,
+        #a0623a 50%, #e6cfb3 65%, #b07a4f 80%, #d9b38c 100%);
+}
+
+.saturn-bg {
+    background-color: #1f1c10;
+}
+.saturn {
+    width: 120px;
+    height: 120px;
+    background: radial-gradient(circle at 35% 35%, #f5e3b3, #c9a55c, #6b5426);
+}
+.saturn-ring {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 220px;
+    height: 50px;
+    margin-top: -25px;
+    margin-left: -110px;
+    border: 6px solid #e0c98a;
+    border-radius: 50%;
+    transform: rotate(-15deg);
+}
+
+.moon-bg {
+    background-color: #15161c;
+}
+.moon {
+    background: radial-gradient(circle at 35% 35%, #f0f0f0, #a9a9b3, #4a4a52);
+}
+
+.blackhole-bg {
+    background-color: #050505;
+}
+.blackhole {
+    background-color: #000000;
+    border: 4px solid #ff9a3c;
+    box-shadow: 0 0 40px 15px #ff6a00;
+}
+
+.nebula-bg {
+    background: linear-gradient(135deg, #2b0f3a, #0f2a4a);
+}
+.nebula {
+    width: 200px;
+    height: 160px;
+    background: radial-gradient(ellipse, #ff6ec7, #7b2ff7, transparent 70%);
+}
+
+.neutron-bg {
+    background-color: #070b1f;
+}
+.neutron {
+    width: 50px;
+    height: 50px;
+    background-color: #ffffff;
+    box-shadow: 0 0 30px 15px #7fd4ff, 0 0 80px 40px #2a6dff;
+}
+
+.galaxy-bg {
+    background-color: #0a0a1a;
+}
+.galaxy {
+    width: 220px;
+    height: 90px;
+    background: radial-gradient(ellipse, #ffffff, #ffd59e 15%, #8f88ff 45%, transparent 70%);
+    transform: rotate(-20deg);
+}
+
+.facts-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.fact {
+    flex: 1 1 200px;
+    padding: 1.5rem;
+    text-align: center;
+    background-color: #1a1d42;
+    border-radius: 1rem;
+    border-top: 4px solid #6c63ff;
+}
+
+.fact .fact-number {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #8f88ff;
+    margin-bottom: 0.5rem;
+}
+
+.fact p {
+    font-size: 1rem;
+}
+
+.footer {
+    padding: 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #8888aa;
+    background-color: #14173a;
+}
+
+@media (max-width: 720px) {
+
+    html {
+        font-size: 12px;
+    }
+
+    .navbar {
+        gap: 0.5rem;
+        padding: 0.75rem 0.5rem;
+    }
+
+    .nav-button {
+        width: 23%;
+        font-size: 1rem;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .section {
+        padding: 3rem 1rem;
+    }
+
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        min-height: 100vh;
+        grid-template-rows: 1fr auto;
+    }
+
+    .card-content h3 {
+        font-size: 2.2rem;
+    }
+
+    .card-content p {
+        font-size: 1.4rem;
+    }
+
+    .card-content .card-tag {
+        font-size: 1.1rem;
+    }
+}
