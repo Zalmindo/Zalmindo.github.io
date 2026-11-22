@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Backlog Tracker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <h1 class="logo">Backlog<span>Quest</span></h1>
+
+        <button id="menu-btn" class="menu-btn" aria-label="Open filter menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav id="filter-menu" class="filter-menu">
+            <p class="menu-title">Show games:</p>
+            <button class="filter-btn active" data-filter="all">All Games</button>
+            <button class="filter-btn" data-filter="backlog">Still Playing</button>
+            <button class="filter-btn" data-filter="completed">Completed</button>
+        </nav>
+    </header>
+
+    <main class="container">
+
+        <section class="greeting-card">
+            <h2 id="greeting">Loading player data...</h2>
+            <p id="greeting-sub" class="greeting-sub"></p>
+        </section>
+
+        <section class="stats">
+            <div class="stat">
+                <span id="total-count" class="stat-number">0</span>
+                <span class="stat-label">Total</span>
+            </div>
+            <div class="stat">
+                <span id="backlog-count" class="stat-number">0</span>
+                <span class="stat-label">In Backlog</span>
+            </div>
+            <div class="stat">
+                <span id="completed-count" class="stat-number">0</span>
+                <span class="stat-label">Completed</span>
+            </div>
+        </section>
+
+        <section class="panel">
+            <h3 class="panel-title">Add a Game</h3>
+            <form id="add-form" class="add-form">
+                <input type="text" id="game-input" class="text-input" placeholder="Game title..." maxlength="40">
+                <select id="platform-select" class="select-input">
+                    <option value="PC">PC</option>
+                    <option value="PlayStation">PlayStation</option>
+                    <option value="Xbox">Xbox</option>
+                    <option value="Switch">Switch</option>
+                    <option value="Mobile">Mobile</option>
+                </select>
+                <button type="submit" class="btn btn-primary">+ Add</button>
+            </form>
+            <p id="form-message" class="form-message"></p>
+        </section>
+
+        <section class="panel">
+            <h3 class="panel-title">Search Your Library</h3>
+            <div id="search-wrap" class="search-wrap">
+                <input type="text" id="search-input" class="text-input" placeholder="Click here to search...">
+                <p id="search-hint" class="search-hint">Type to filter your games by title</p>
+            </div>
+        </section>
+
+        <section class="library">
+            <div class="panel list-panel">
+                <h3 class="panel-title">My Backlog</h3>
+                <p class="list-tip">Click a game to mark it complete. Hover for details.</p>
+                <ul id="game-list" class="game-list">
+                </ul>
+                <p id="empty-message" class="empty-message">No games found. Add one above!</p>
+            </div>
+
+            <aside id="preview" class="panel preview">
+                <h3 class="panel-title">Game Info</h3>
+                <div id="preview-content" class="preview-content">
+                    <p class="preview-placeholder">Hover over a game to see its info.</p>
+                </div>
+            </aside>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <p>AME 220 &middot; Week 6 &middot; JavaScript Events</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
